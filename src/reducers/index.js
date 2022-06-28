@@ -1,3 +1,5 @@
+import { combineReducers } from "redux";
+
 //Below, just returns an array object of songs. It's an overkill, but it's for the purpose of using Redux.
 const songsReducer = () => {
   return [
@@ -14,3 +16,8 @@ const selectedSongReducer = (selectedSong = null, action) => {
   }
   return selectedSong;
 };
+
+export default combineReducers({
+  songs: songsReducer,
+  selectedSong: selectedSongReducer
+})
