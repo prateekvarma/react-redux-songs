@@ -7,4 +7,9 @@ class SongList extends React.Component {
   }
 }
 
-export default connect()(SongList); //yes this is valid syntax - calling a function inside a function.
+const mapStateToProps = (state) => {
+  console.log(state); //logs the 4 different song objects, and selectedSong as null
+  return state;
+}
+
+export default connect(mapStateToProps)(SongList); //yes this is valid syntax - calling a function inside a function.
