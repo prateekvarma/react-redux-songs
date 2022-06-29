@@ -28,7 +28,6 @@ class SongList extends React.Component {
 
 //Below this function gets called on each data change.
 const mapStateToProps = (state) => {
-  console.log(state); //this console.log will have the value of current selected song - since mapStateToProps will re-run on each data change.
   return { songs: state.songs }; //this is equivalent to 'props.songs === { songs: state.songs }' being injected into the SongList component above. And this is how the data is passed from the REDUX store into a REACT component.
 };
 
